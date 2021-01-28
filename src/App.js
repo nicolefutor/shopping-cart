@@ -12,12 +12,20 @@ import ItemPage from "./components/ItemPage";
 import items from './data/items';
 import { useEffect, useState } from "react";
 import UnderConstruction from "./components/UnderConstruction";
+import styled from "styled-components";
 
 const pureArraySet = (array, oldItem, newItem) => {
   let newArr = Array.from(array);
   newArr[array.indexOf(oldItem)] = newItem;
   return newArr;
 }
+
+const Container = styled.div`
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+
+`
 
 function App() {
   const shopItems = items;
@@ -43,7 +51,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
+      <Container>
         <Navbar numItems={quantity} />
         <Switch>
           <Route path="/shop">
@@ -62,7 +70,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </div>
+      </Container>
     </BrowserRouter>
   );
 }

@@ -1,4 +1,26 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
+
+const Button = styled.button`
+    border-radius: 0;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+`
+
+const Input = styled.input`
+    border-radius: 0;
+    text-align: center;
+    border: 2px solid black;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    width: 75px;
+`
+
+const Container = styled.div`
+    display: inline;
+    margin-right: 10px;
+`
 
 const QuantityInput = (props) => {
     const [num, setNum] = useState(props.quantity)
@@ -19,11 +41,11 @@ const QuantityInput = (props) => {
     }
 
     return (
-        <div>
-            <button onClick={handleDecrement}>-</button>
-            <input type='number' value={num} onChange={handleChange} />
-            <button onClick={handleIncrement}>+</button>
-        </div>
+        <Container>
+            <Button onClick={handleDecrement}>-</Button>
+            <Input type='number' value={num} onChange={handleChange} />
+            <Button onClick={handleIncrement}>+</Button>
+        </Container>
     )
 }
 

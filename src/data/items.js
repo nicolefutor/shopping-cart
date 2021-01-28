@@ -38,7 +38,7 @@ const items = [
     {
         id: 'violin-strings',
         name: 'Thomastik Dominant Violin String Set',
-        price: 66.90,
+        price: 67,
         img: 'https://www.sharmusic.com/productimages/image.axd/i.d129s+44+m/w.350/h.350/thomastik+infeld+dominant+violin+string+set+with+steel+e+string+loop+end+-+medium+gauge_.jpg'
     },
     {
