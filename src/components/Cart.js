@@ -28,7 +28,7 @@ const Cart = (props) => {
                 <Heading>Cart</Heading>
                 {cartItems}
             </Container>
-            <Paragraph>Grand Total: {`$${props.items.map((x) => x.price*x.quantity).reduce((prev, curr) => prev+curr, 0)}`}</Paragraph>
+            <Paragraph>Grand Total: {`$${props.items.map((x) => x.price*x.quantity).reduce((prev, curr) => prev+curr, 0).toFixed(2)}`}</Paragraph>
             <Paragraph><StyledLink to='/under-construction'>Check Out</StyledLink></Paragraph>
         </div>
     )
